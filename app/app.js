@@ -56,6 +56,7 @@ const handleRequest = async (request) => {
     return await addAddress(request);
   } else {
     console.log("helloooo");
+    console.log("hello now in new branch")
     return await listAddresses(request);
   }
 };
