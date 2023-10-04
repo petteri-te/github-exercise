@@ -27,7 +27,6 @@ const addAddress = async (request) => {
   const address = formData.get("address");
   console.log(address);
 
-
   await addressService.create(name, address);
   return redirectTo("/");
 };
@@ -56,6 +55,7 @@ const handleRequest = async (request) => {
   } else if (request.method === "POST") {
     return await addAddress(request);
   } else {
+    console.log("helloooo");
     return await listAddresses(request);
   }
 };
