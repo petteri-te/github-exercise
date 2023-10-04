@@ -1,0 +1,44 @@
+version: "3.4"
+
+services:
+  app:
+    build: app
+    image: app
+    restart: "no"
+    volumes:
+      - ./app/:/app
+      - ./app-cache/:/app-cache
+    ports:
+      - 7777:7777
+    depends_on:
+      - database
+      - flyway
+    env_file:
+      - project.env
+
+  database:
+    container_name: database-server
+    image: postgres:14.1
+    restart: "no"
+    env_file:
+        - project.env
+
+  flyway:
+    image: flyway/flyway
+    depends_on:
+      - database
+    volumes:
+      - .:/flyway/sql
+    command: -connectRetries=60 -baselineOnMigrate=true migrate
+    env_file:
+      - project.env
+
+  e2e-playwright:
+    entrypoint: "/bin/true" # Prevent startup on docker-compose up
+    build: e2e-playwright
+    image: e2e-playwright
+    network_mode: host
+    depends_on:
+      - app
+    volumes:
+      - ./e2e-playwright/tests:/e2e-playwright/tests

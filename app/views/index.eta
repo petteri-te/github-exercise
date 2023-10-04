@@ -1,0 +1,22 @@
+<h1>Addresses</h1>
+
+<h2>Add an address</h2>
+
+<form method="POST">
+  Name: <input type="text" name="name" /><br/>
+  Address: <input type="text" name="address" /><br/>
+  <input type="submit" value="Submit!" />
+</form>
+
+<h2>Current addresses</h2>
+
+<ul>
+<% it.addresses.forEach((address) => { %>
+  <li>
+    <%= address.name %>, <%= address.address %>
+    <form method="POST" action="/delete/<%= address.id %>">
+      <input type="submit" value="Delete" />
+    </form>
+  </li>
+<% }); %>
+</ul>
