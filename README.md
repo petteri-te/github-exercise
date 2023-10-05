@@ -1,3 +1,13 @@
+# this is our git exercise
+multideveloper env so that we create working branches, merge pull requests 
+
+
+
+
+
+
+
+
 # Walking skeleton
 
 This is a walking skeleton -- a starting point for working on the course
