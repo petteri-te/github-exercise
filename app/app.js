@@ -31,7 +31,7 @@ const addAddress = async (request) => {
   return redirectTo("/");
 };
 
-const listAddresses = async (request) => {
+const listAddresses = async () => {
   const data = {
     addresses: await addressService.findAll(),
   };
@@ -55,8 +55,6 @@ const handleRequest = async (request) => {
   } else if (request.method === "POST") {
     return await addAddress(request);
   } else {
-    console.log("helloooo");
-    console.log("hello now in new branch")
     return await listAddresses(request);
   }
 };
