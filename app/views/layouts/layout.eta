@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Task application!</title>
+    <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.1/dist/paper.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="container paper">
+      <%~ it.body %>
+    </div>
+  </body>
+</html
