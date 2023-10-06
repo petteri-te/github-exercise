@@ -2,6 +2,82 @@
 multideveloper env so that we create working branches, merge pull requests 
 
 
+Github multi-developer exercise
+
+Watch the youtube video
+https://www.youtube.com/watch?v=DVRQoVRzMIY
+
+The code for the exercise use
+https://github.com/petteri-te/github-exercise
+
+You need to be added as a collaborator so that you can review and approve pull requests. Contact the teacher if not done yet.
+
+NOTE: the video uses master branch name, but github gives example commands  that use main when a new repo is created. main is used in github-exercise. You can see it when you log in to github
+
+
+TASK 1 - TO MAKE A CHANGE IN CODE
+Set up your local directory to connect to (this chapter 13-4 exercise code) https://github.com/petteri-te/github-exercise
+Pull the code to your laptop
+git pull origin main (if you set up the remote name as origin, and the master branch from there)
+Create a new branch in your local git
+Make a code change in your new branch and commit it to you local git
+Do something that does not break the app. Run the app on your local laptop to make sure your change was successful. That is, test it. You can do something as simple as console.log or change some text in the view template that is easily visible in the browser, like add your name somewhere. Easy to verify and test
+Push you change up to github common repo (when you know it works)
+Check that a PR (pull request) is created in github repo
+Assign some fellow student (collaborator) to review it
+Wait for that someone to approve your change and then merge it. You should not be able to merge before PR is approved (check set in github)
+
+You can do multiple changes to practice. Create a new local branch for your change and then push it to repo. 
+TASK 2 - TO REVIEW AND APPROVE A PR
+Someone will assign you to review their change. You will get an email notification about this. You can also monitor the github repo to see what is going on
+Go to the PR (pull request), open the source code and review the change
+Make sure that the change is something that does not break the application, the code looks nicely written, understandable etc. We should be able to trust that the person who has created the PR has first tested it and has verified that the functionality does not break the app. Your job is to make sure the implementation is pretty, nice, good architecture, good coding, good solution etc. You can comment, ask for changes or approve. When you approve. Then the PR creator can and will merge the code
+
+
+TASK 3 - CLEAN UP
+Some time/days later after you have done one or multiple changes to code, go and clean up at least one of your PR branches from the repo. So delete/remove it. 
+
+
+
+
+
+
+REMINDER WHAT GITHUB GIVES YOU WHEN NEW REPO IS CREATED
+echo "# github-exercise" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/petteri-te/github-exercise.git
+git push -u origin main
+NOW YOU already have the code in the remote repo so get it from there. You do not need to commit anything in the beginning. Just pull to your empty local git directory.
+Then you can start making a change to the existing code.
+
+You need to 
+git init
+git remote ….
+git pull
+
+
+TIMELINE IN THE VIDEO
+at 18min start setting up folder and git repo on your local machine
+learn how to create local branches, move between them, merge them
+at 24min20s add branches to your local git
+-git checkout -b new-branch
+at 28min40s start setting up remote repo
+at 33min making sure you have configured your github with name and email for remote repo connection
+(and you might need to authenticate yourself - login in to github)
+git config –global user.name your-name
+git config –global user.email your-email    you used in github account
+at 38min how to resolve merge conflict between remote repo and your local 
+-manually resolve in the code file
+-git add .
+-git commit -m “merge change”
+-git push
+at xx   now push your new local working branch to remote repo and create a new branch there
+git push -u origin new
+and now resolve the pull request (PR) in github 
+
 
 
 
