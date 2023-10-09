@@ -31,7 +31,7 @@ const addAddress = async (request) => {
   return redirectTo("/");
 };
 
-const listAddresses = async (request) => {
+const listAddresses = async () => {
   const data = {
     addresses: await addressService.findAll(),
   };
