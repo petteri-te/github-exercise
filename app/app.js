@@ -55,8 +55,6 @@ const handleRequest = async (request) => {
   } else if (request.method === "POST") {
     return await addAddress(request);
   } else {
-    console.log("doing a PR");
-    console.log("New-petteri branch ");
     return await listAddresses(request);
   }
 };

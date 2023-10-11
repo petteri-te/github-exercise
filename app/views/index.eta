@@ -1,7 +1,5 @@
 <h1>Addresses</h1>
 
-<h2>Add an address</h2>
-
 <form method="POST">
   Name: <input type="text" name="name" /><br/>
   Address: <input type="text" name="address" /><br/>
@@ -20,3 +18,5 @@
   </li>
 <% }); %>
 </ul>
+
+<p>I wish you luck ❤️ </p>
