@@ -1,4 +1,5 @@
 # THIS IS YOUR GITHUB exercise
+
 multideveloper env so that we create working branches, merge pull requests 
 
 
@@ -15,7 +16,8 @@ You need to be added as a collaborator so that you can review and approve pull r
 NOTE: the video uses master branch name, but github gives example commands  that use main when a new repo is created. main is used in github-exercise. You can see it when you log in to github
 
 
-# TASK 1 - TO MAKE A CHANGE IN CODE
+## TASK 1 - TO MAKE A CHANGE IN CODE
+
 Set up your local directory to connect to (this chapter 13-4 exercise code) https://github.com/petteri-te/github-exercise
 Pull the code to your laptop
 git pull origin main (if you set up the remote name as origin, and the master branch from there)
@@ -29,16 +31,26 @@ Wait for that someone to approve your change and then merge it. You should not b
 
 You can do multiple changes to practice. Create a new local branch for your change and then push it to repo. 
 
-It is technically possible to just push directly to main branch. !!!so that is violating good sw dev practises.You need to create first a branch in your local git.Always make sure you pull the latest main branch from the github repo so you have the latest codeContinuously keep pulling so there are less surprises (conflicts) when it is time for you to push your changes up to github remote repo.Make the changes in your local git branchPush your local branch to remote github repo (main / origin)Create a pull request in github and assign reviewersMake changes fi reviewers requestWhen all needed reviews and approvals are done MERGE the PR (your code) into github main branchClean the PR branch if needed
+>It is technically possible to just push directly to main branch. !!! So that is violating good sw dev practises.
+1. You need to create first a branch in your local git.
+2. Always make sure you pull the latest main branch from the github repo so you have the latest code
+3. Continuously keep pulling so there are less surprises (conflicts) when it is time for you to push your changes up to github remote repo.
+4. Make the changes in your local git branchPush your local branch to remote github repo (main / origin)
+5. Create a pull request in github and assign reviewers
+6. Make changes fi reviewers request
+7. When all needed reviews and approvals are done MERGE the PR (your code) into github main branch
+8. Clean the PR branch if needed
 
 
-# TASK 2 - TO REVIEW AND APPROVE A PR
+## TASK 2 - TO REVIEW AND APPROVE A PR
+
 Someone will assign you to review their change. You will get an email notification about this. You can also monitor the github repo to see what is going on
 Go to the PR (pull request), open the source code and review the change
 Make sure that the change is something that does not break the application, the code looks nicely written, understandable etc. We should be able to trust that the person who has created the PR has first tested it and has verified that the functionality does not break the app. Your job is to make sure the implementation is pretty, nice, good architecture, good coding, good solution etc. You can comment, ask for changes or approve. When you approve. Then the PR creator can and will merge the code
 
 
-# TASK 3 - CLEAN UP
+## TASK 3 - CLEAN UP
+
 Some time/days later after you have done one or multiple changes to code, go and clean up at least one of your PR branches from the repo. So delete/remove it. 
 
 
@@ -46,7 +58,8 @@ Some time/days later after you have done one or multiple changes to code, go and
 
 
 
-REMINDER WHAT GITHUB GIVES YOU WHEN NEW REPO IS CREATED
+### REMINDER WHAT GITHUB GIVES YOU WHEN NEW REPO IS CREATED
+
 echo "# github-exercise" >> README.md
 git init
 git add README.md
@@ -63,7 +76,8 @@ git remote ….
 git pull
 
 
-TIMELINE IN THE VIDEO
+### TIMELINE IN THE VIDEO
+
 at 18min start setting up folder and git repo on your local machine
 learn how to create local branches, move between them, merge them
 at 24min20s add branches to your local git
@@ -85,10 +99,7 @@ and now resolve the pull request (PR) in github
 
 
 
-
-
-
-# Walking skeleton
+# ------------ Walking skeleton  README part  ------------
 
 This is a walking skeleton -- a starting point for working on the course
 assignments -- for the free online Web Software Development course available at
