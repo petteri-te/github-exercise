@@ -34,6 +34,7 @@ const addAddress = async (request) => {
 const listAddresses = async (request) => {
   const data = {
     addresses: await addressService.findAll(),
+    additionalMessage: "This is an additional message on the page.",
   };
 
   return new Response(await renderFile("index.eta", data), responseDetails);
