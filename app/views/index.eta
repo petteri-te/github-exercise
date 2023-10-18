@@ -1,3 +1,9 @@
+<style>
+    body{
+        background-color: lightblue;
+    }
+</style>
+
 <h1>Addresses</h1>
 
 <h2>Add new address</h2>
