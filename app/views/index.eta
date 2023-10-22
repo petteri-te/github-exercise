@@ -1,8 +1,8 @@
 <% layout("./layouts/layout.eta") %>
 
-<h1>Addresses</h1>
+<h1>Addresses🏡</h1>
 
-<h2>Add new address</h2>
+<h2>➕Add new address</h2>
 
 <form method="POST">
     <label class="form-label"> Name: </label>
