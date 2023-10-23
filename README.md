@@ -78,21 +78,21 @@ git pull
 
 ### TIMELINE IN THE VIDEO
 
-at 18min start setting up folder and git repo on your local machine
-learn how to create local branches, move between them, merge them
-at 24min20s add branches to your local git
+1 - At 18min start setting up folder and git repo on your local machine
+2- learn how to create local branches, move between them, merge them
+3- at 24min20s add branches to your local git
 -git checkout -b new-branch
-at 28min40s start setting up remote repo
-at 33min making sure you have configured your github with name and email for remote repo connection
+4- at 28min40s start setting up remote repo
+5 - at 33min making sure you have configured your github with name and email for remote repo connection
 (and you might need to authenticate yourself - login in to github)
 git config –global user.name your-name
 git config –global user.email your-email    you used in github account
-at 38min how to resolve merge conflict between remote repo and your local 
+6 - at 38min how to resolve merge conflict between remote repo and your local 
 -manually resolve in the code file
 -git add .
 -git commit -m “merge change”
 -git push
-at xx   now push your new local working branch to remote repo and create a new branch there
+7 - at xx   now push your new local working branch to remote repo and create a new branch there
 git push -u origin new
 and now resolve the pull request (PR) in github 
 
