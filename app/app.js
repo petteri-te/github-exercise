@@ -1,5 +1,5 @@
-import { serve } from "https://deno.land/std@0.202.0/http/server.ts";
-import { configure, renderFile } from "https://deno.land/x/eta@v2.2.0/mod.ts";
+import { serve } from "./deps.js";
+import { configure, renderFile } from "./deps.js";
 import * as addressService from "./services/addressService.js";
 
 configure({
