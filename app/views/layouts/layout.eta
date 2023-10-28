@@ -8,20 +8,17 @@
 
     <style>
         body{
-            background-color: lightblue;
+            background-color: coral;
             margin-left: 30px;
         }
-
         .form-field {
             min-width: 300px;
         }
-
         .form-label {
             min-width: 60px;
             display: inline-block;
             margin: 5px;
         }
-
         .submit-btn {
             margin: 5px 0 0 320px;
         }
