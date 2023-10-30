@@ -15,17 +15,14 @@
             margin-left: 30px;
             font-family: 'Kalam', cursive;
         }
-
         .form-field {
             min-width: 300px;
         }
-
         .form-label {
             min-width: 60px;
             display: inline-block;
             margin: 5px;
         }
-
         .submit-btn {
             margin: 5px 0 0 320px;
         }
