@@ -1,15 +1,15 @@
 <% layout("./layouts/layout.eta") %>
 
-<h1>Addresses🏡</h1>
+<h1> WelCome to Addresses Application 🏡</h1>
 
-<h2>➕Add new address</h2>
+<h2>➕ Add new address</h2>
 
 <form method="POST">
     <label class="form-label"> Name: </label>
     <input class="form-field" type="text" name="name"/><br/>
     <label class="form-label">Address: </label>
     <input class="form-field" type="text" name="address"/><br/>
-    <input class="submit-btn" type="submit" value="Submit!"/>
+    <input class="submit-btn" type="submit" value="Submit!" class="btn btn-primary"/>
 </form>
 
 <h2>Current addresses</h2>
@@ -27,8 +27,6 @@
 
 <p>I wish you luck ❤️ </p>
 
-<p>Nice touch to layout :) Love it! <p>
+<p>Nice touch to layout :) Love it! </p>
 
 <p>Coding like poetry should be short and concise. ― Santosh Kalwar</p>
-
-
