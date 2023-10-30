@@ -14,25 +14,23 @@ const create = async (name, address) => {
 
 };
 
+// Function to find all addresses
 const findAll = async () => {
-  let result = await executeQuery("SELECT * FROM addresses;");
-  return result.rows;
+  return await sql`SELECT * FROM addresses`;
 };
 
+// Function to find addresses by name or address (partial match)
 const findByNameOrAddressLike = async (nameOrAddress) => {
   const likePart = `%${nameOrAddress}%`;
 
-  let result = await executeQuery("SELECT * FROM addresses WHERE name ILIKE $namePart OR address ILIKE $likePart;",
-    { name: likePart, address: likePart }
-  );
-  return result.rows;
+  return await sql`SELECT * FROM addresses
+    WHERE name ILIKE ${ namePart } OR address ILIKE ${ namePart }`;
 };
 
+// Function to delete an address by ID
 const deleteById = async (id) => {
-  let result = await executeQuery("DELETE FROM addresses WHERE id = $id;",
-    { id: id }
-  );
-  return result.rows;
-};
+    await sql`DELETE FROM addresses WHERE id = ${ id }`;
+  };
 
+  // Exporting the functions to be used in other modules
 export { deleteById, create, findAll, findByNameOrAddressLike };
