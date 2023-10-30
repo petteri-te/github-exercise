@@ -1,4 +1,8 @@
+// Importing the PostgreSQL client module
 import postgres from "https://deno.land/x/postgresjs@v3.3.5/mod.js";
+
+// Creating a PostgreSQL client instance
+const sql = postgres({});
 
 const create = async (name, address) => {
   console.log("in create");
