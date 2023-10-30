@@ -4,13 +4,14 @@ import postgres from "https://deno.land/x/postgresjs@v3.3.5/mod.js";
 // Creating a PostgreSQL client instance
 const sql = postgres({});
 
+// Function to create a new address
 const create = async (name, address) => {
-  console.log("in create");
-  let result = await executeQuery("INSERT INTO addresses (name, address) VALUES ($name, $address);",
-    { name: name, address: address }
-  );
-  console.log("done the db addition  insert into");
-  return result.rows;
+    console.log("in create");
+    // Inserting the provided name and address into the 'addresses' table
+  await sql`INSERT INTO addresses (name, address)
+    VALUES (${ name }, ${ address })`;
+    console.log("Address added to the database");
+
 };
 
 const findAll = async () => {
