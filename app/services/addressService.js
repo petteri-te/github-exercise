@@ -19,13 +19,14 @@ const findByNameOrAddressLike = async (nameOrAddress) => {
 
   let result = await executeQuery("SELECT * FROM addresses WHERE name ILIKE $namePart OR address ILIKE $likePart;",
     { name: likePart, address: likePart }
-    );
+  );
   return result.rows;
 };
 
 const deleteById = async (id) => {
-  let result = await executeQuery(`DELETE FROM addresses WHERE id = $id;`);
-  { id: id }
+  let result = await executeQuery("DELETE FROM addresses WHERE id = $id;",
+    { id: id }
+  );
   return result.rows;
 };
 
