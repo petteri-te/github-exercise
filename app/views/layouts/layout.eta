@@ -11,9 +11,10 @@
 
     <style>
         body{
-            background-color: coral;
-            margin-left: 30px;
-            font-family: 'Kalam', cursive;
+            
+            background-color: #b5d446;
+            margin: 50px;
+            font-family: Papyrus, fantasy;
         }
         .form-field {
             min-width: 300px;
