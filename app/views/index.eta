@@ -12,32 +12,33 @@
     <input class="submit-btn" type="submit" value="Submit!" class="btn btn-primary"/>
 </form>
 
-<h2>Current addresses</h2>
+<div class="address-wrapper">
+    <h2>Current addresses</h2>
 
-<ul>
-    <% it.addresses.forEach((address) => { %>
-        <li>
-            <%= address.name %>, <%= address.address %>
-            <form method="POST" action="/delete/<%= address.id %>">
-                <input type="submit" value="Delete"/>
-            </form>
-        </li>
-    <% }); %>
-</ul>
+    <ul>
+        <% it.addresses.forEach((address) => { %>
+            <li>
+                <%= address.name %>, <%= address.address %>
+                <form method="POST" action="/delete/<%= address.id %>">
+                    <input type="submit" value="Delete"/>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
 
-<p>I wish you luck ❤️ </p>
+    <p>I wish you luck ❤️ </p>
 
-<p>Nice touch to layout :) Love it! </p>
+    <p>Nice touch to layout :) Love it! </p>
 
-<p>Coding like poetry should be short and concise. ― Santosh Kalwar</p>
+    <p>Coding like poetry should be short and concise. ― Santosh Kalwar</p>
 
-<p>Hello</p>
+    <p>Hello</p>
 
-<p>Live long and prosper - :🖖 Jon</p>
-
-
-<p> Hi! Have a nice day!</p>
-
-<p>Kangroos can't jump backward - Kasra</p>
+    <p>Live long and prosper - :🖖 Jon</p>
 
 
+    <p> Hi! Have a nice day!</p>
+
+    <p>Kangroos can't jump backward - Kasra</p>
+
+</div>

@@ -27,6 +27,33 @@
         .submit-btn {
             margin: 5px 0 0 320px;
         }
+                p {
+            font-family: "Roboto", sans-serif;
+            font-size: 18px;
+            line-height: 1.5;
+            border-bottom: 1px dashed black;
+        }
+
+        h2 {
+            color: #03009E;
+            font-family: "Roboto", sans-serif;
+            text-transform: capitalize;
+        }
+
+        .address-wrapper {
+            background-color: #daff54;
+            max-width: 30%;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 5px;
+            margin: 5px;
+            box-shadow: 2px 2px 6px black;   
+        }
+
+        footer p {
+            max-width: 30%;
+        }
+        
     </style>
 
 </head>
