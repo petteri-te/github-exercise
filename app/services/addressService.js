@@ -21,8 +21,10 @@ const findAll = async () => {
 
 // Function to find addresses by name or address (partial match)
 const findByNameOrAddressLike = async (nameOrAddress) => {
-  const likePart = `%${nameOrAddress}%`;
-
+ 
+  // modify from Sonja: likePart -> namePart
+  // const likePart = `%${nameOrAddress}%`;
+  const namePart = `%${nameOrAddress}%`;
   return await sql`SELECT * FROM addresses
     WHERE name ILIKE ${ namePart } OR address ILIKE ${ namePart }`;
 };
