@@ -2,3 +2,4 @@ app-cache/deps/**
 app-cache/gen/**
 app-cache
 .vscode
+.DS_Store

@@ -1,66 +1,21 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <title>Addresses</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta charset="utf-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <style>
-        body{
-            
-            background-color: #b5d446;
-            margin: 50px;
-            font-family: Papyrus, fantasy;
-        }
-        .form-field {
-            min-width: 300px;
-        }
-        .form-label {
-            min-width: 60px;
-            display: inline-block;
-            margin: 5px;
-        }
-        .submit-btn {
-            margin: 5px 0 0 320px;
-        }
-                p {
-            font-family: "Roboto", sans-serif;
-            font-size: 18px;
-            line-height: 1.5;
-            border-bottom: 1px dashed black;
-        }
-
-        h2 {
-            color: #03009E;
-            font-family: "Roboto", sans-serif;
-            text-transform: capitalize;
-        }
-
-        .address-wrapper {
-            background-color: #daff54;
-            max-width: 30%;
-            border: 1px solid black;
-            border-radius: 15px;
-            padding: 5px;
-            margin: 5px;
-            box-shadow: 2px 2px 6px black;   
-        }
-
-        footer p {
-            max-width: 30%;
-        }
-        
-    </style>
-
-</head>
-<body>
-<div>
-    <%~ it.body %>
-    <%~ includeFile("./partials/footer.eta") %>
-</div>
-</body>
+    <head>
+        <title>Addresses</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="assets/css/main.min.css" />
+    </head>
+    <body>
+        <section class="app container">
+            <article>
+                <%~ it.body %>
+                <%~ includeFile("./partials/footer.eta") %>
+            <article>
+        </section>
+    </body>
 </html>

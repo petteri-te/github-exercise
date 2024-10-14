@@ -1,0 +1,27 @@
+# .github/workflows/build.yml
+name: Build SCSS
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Sass
+        run: |
+          npm install -g sass  # Install Sass globally
+
+      - name: Check Current Directory
+        run: pwd
+
+      - name: Compile SCSS
+        run: ./app/compile_sass.sh

@@ -96,7 +96,16 @@ git config –global user.email your-email    you used in github account
 git push -u origin new
 and now resolve the pull request (PR) in github 
 
+## Adding styles
 
+To edit the styles, navigate to
+`app/assets/scss`, and make sure to run the bash script located under
+`/app` to compile the scss files and output them as a single file
+under `app/assets/css`.
+
+```shell
+bash compile_sass.sh
+```
 
 
 # ------------ Walking skeleton  README part  ------------
