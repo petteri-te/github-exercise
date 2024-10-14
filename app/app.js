@@ -1,6 +1,7 @@
 // Importing the required modules from external sources.
-import { serve } from "https://deno.land/std@0.202.0/http/server.ts";
-import { configure, renderFile } from "https://deno.land/x/eta@v2.2.0/mod.ts";
+import { serve } from "./deps.js";
+import { configure, renderFile } from "./deps.js";
+import { serveFile } from "./deps.js";
 import * as addressService from "./services/addressService.js";
 
 // Configuring the views directory for rendering templates.
@@ -67,7 +68,10 @@ const deleteAddress = async (request) => {
 const handleRequest = async (request) => {
   // Parsing the URL.
   const url = new URL(request.url);
-  if (request.method === "POST" && url.pathname.startsWith("/delete/")) {
+  if (url.pathname.startsWith("/assets")) {
+    const filePath = `.${url.pathname}`;
+    return await serveFile(request, filePath);
+  } else if (request.method === "POST" && url.pathname.startsWith("/delete/")) {
     // If it's a POST request to delete an address.
     return await deleteAddress(request);
   } else if (request.method === "POST") {
