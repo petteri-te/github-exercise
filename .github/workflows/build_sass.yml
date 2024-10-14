@@ -4,10 +4,10 @@ name: Build SCSS
 on:
   push:
     branches:
-      - Bahe
+      - main
   pull_request:
     branches:
-      - Bahe
+      - main
 
 jobs:
   build:
