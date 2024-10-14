@@ -1,19 +1,21 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <title>Addresses</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta charset="utf-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="assets/css/main.min.css" />
-</head>
-<body>
-<div>
-    <%~ it.body %>
-    <%~ includeFile("./partials/footer.eta") %>
-</div>
-</body>
+    <head>
+        <title>Addresses</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="assets/css/main.min.css" />
+    </head>
+    <body>
+        <section class="app container">
+            <article>
+                <%~ it.body %>
+                <%~ includeFile("./partials/footer.eta") %>
+            <article>
+        </section>
+    </body>
 </html>

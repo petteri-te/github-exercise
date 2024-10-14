@@ -1,16 +1,21 @@
 <% layout("./layouts/layout.eta") %>
 
-<h1> WelCome to Addresses Application 🏡</h1>
+<div class="title-headings">
+    <h1> Welcome to the address book 🏡</h1>
+    <h2>➕ Add new address</h2>
+</div>
 
-<h2>➕ Add new address</h2>
-
-<form method="POST">
-    <label class="form-label"> Name: </label>
-    <input class="form-field" type="text" name="name"/><br/>
-    <label class="form-label">Address: </label>
-    <input class="form-field" type="text" name="address"/><br/>
-    <input class="submit-btn" type="submit" value="Submit!" class="btn btn-primary"/>
-</form>
+<div class="form-wrapper">
+    <form method="POST">
+        <fieldset>
+            <label class="form-label"> Name: </label>
+            <input class="form-field" type="text" name="name"/>
+            <label class="form-label">Address: </label>
+            <input class="form-field" type="text" name="address"/>
+        </fieldset>
+        <input class="button" role="button" type="submit" value="Submit!"/>
+    </form>
+</div>
 
 <div class="address-wrapper">
     <h2>Current addresses</h2>
