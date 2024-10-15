@@ -1,4 +1,4 @@
-import { Pool } from "./deps.js";
+import { Pool } from "../deps.js";
 
 const CONCURRENT_CONNECTIONS = 2;
 let connectionPool;
