@@ -3,7 +3,7 @@
 multideveloper env so that we create working branches, merge pull requests 
 
 
-Github multi-developer exercise
+Github multi-developer exercises
 
 Watch the youtube video
 https://www.youtube.com/watch?v=DVRQoVRzMIY
