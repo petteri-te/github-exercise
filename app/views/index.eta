@@ -6,13 +6,15 @@
 </div>
 
 <div class="form-wrapper">
-    <form method="POST">
+    <form id="addressForm" method="POST">
         <fieldset>
             <label class="form-label" for="name"> Name: </label>
             <input id="name" class="form-field" type="text" name="name"/>
             <label for="address"class="form-label">Address: </label>
             <input id ="address" class="form-field" type="text" name="address" />
         </fieldset>
+           <!-- Error message container -->
+        <div id="error-message" style="color: red; margin-top: 10px;"></div>
         <button class="button" type="submit" aria-label="Add new address">Submit!</button>
     </form>
 </div>
@@ -51,3 +53,25 @@
     <p>Hei,farsana added a text here</p>
 
 </div>
+
+<script>
+    // Get the form and error message elements
+    const form = document.getElementById('addressForm');
+    const errorMessage = document.getElementById('error-message');
+    
+    // Add event listener on form submission
+    form.addEventListener('submit', function(event) {
+        // Clear previous error message
+        errorMessage.textContent = '';
+        
+        // Get input values
+        const name = document.getElementById('name').value.trim();
+        const address = document.getElementById('address').value.trim();
+        
+        // Check if either field is empty
+        if (!name || !address) {
+            event.preventDefault(); // Prevent form submission
+            errorMessage.textContent = 'Both Name and Address are required.';
+        }
+    });
+</script>
