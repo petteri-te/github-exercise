@@ -103,6 +103,8 @@ To edit the styles, navigate to
 `/app` to compile the scss files and output them as a single file
 under `app/assets/css`.
 
+You may need to install `Sass` on your machine, please visit the official [sass website](https://sass-lang.com/install/)
+
 ```shell
 bash compile_sass.sh
 ```
