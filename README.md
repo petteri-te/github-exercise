@@ -2,12 +2,12 @@
 
 1. [Introduction](#this-is-your-github-exercise)
 2. Tasks
-  1. [Task 1](#task-1---to-make-a-change-in-code)
-  2. [Task 2](#task-2---to-review-and-approve-a-pr)
-  3. [Task 3](#task-3---clean-up)
-  4. Help notes
-    1. [Github](#reminder-what-github-gives-you-when-new-repo-is-created)
-    2. [Video timeline](#timeline-in-the-video)
+    1. [Task 1](#task-1---to-make-a-change-in-code)
+    2. [Task 2](#task-2---to-review-and-approve-a-pr)
+    3. [Task 3](#task-3---clean-up)
+    4. Help notes
+        1. [Github](#reminder-what-github-gives-you-when-new-repo-is-created)
+        2. [Video timeline](#timeline-in-the-video)
 3. [Adding styles](#adding-styles)
 4. [Walking Skeleton](#-------------walking-skeleton--readme-part--------------)
 
