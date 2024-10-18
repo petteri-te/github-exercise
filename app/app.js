@@ -4,7 +4,6 @@ import { renderMiddleware } from "./middlewares/renderMiddleware.js";
 import { staticMiddleware } from "./middlewares/staticMiddleware.js";
 import { router } from "./routes/routes.js";
 
-
 const app = new Application();
 
 app.use(renderMiddleware); // rendering pages if it need.
