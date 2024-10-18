@@ -1,3 +1,16 @@
+# Table of contents 
+
+1. [Introduction](#this-is-your-github-exercise)
+2. Tasks
+    1. [Task 1](#task-1---to-make-a-change-in-code)
+    2. [Task 2](#task-2---to-review-and-approve-a-pr)
+    3. [Task 3](#task-3---clean-up)
+    4. Help notes
+        1. [Github](#reminder-what-github-gives-you-when-new-repo-is-created)
+        2. [Video timeline](#timeline-in-the-video)
+3. [Adding styles](#adding-styles)
+4. [Walking Skeleton](#-------------walking-skeleton--readme-part--------------)
+
 # THIS IS YOUR GITHUB exercise
 
 multideveloper env so that we create working branches, merge pull requests 
@@ -102,6 +115,8 @@ To edit the styles, navigate to
 `app/assets/scss`, and make sure to run the bash script located under
 `/app` to compile the scss files and output them as a single file
 under `app/assets/css`.
+
+You may need to install `Sass` on your machine, please visit the official [sass website](https://sass-lang.com/install/)
 
 ```shell
 bash compile_sass.sh
