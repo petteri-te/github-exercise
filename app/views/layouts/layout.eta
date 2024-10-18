@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Addresses</title>
+        <title>Address Book</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
@@ -11,6 +11,39 @@
         <link type="text/css" rel="stylesheet" href="./css/main.min.css" />
     </head>
     <body>
+        <section class="header container">
+            <article>
+                <div class="header-nav-wrapper">
+                    <div class="header-nav-title">
+                        <h1 class="header-title">Menu</h1>
+                        <div class="header-menu-icon-wrapper">
+                            <h1 class="header-menu-icon" id="menu-icon">></h1>
+                            <div class="dropdown-menu" id="dropdown-menu">
+                                <ul>
+                                    <li><a href="https://docs.deno.com/">Deno</a></li>
+                                    <li><a href="https://fitech101.aalto.fi/">Fitech Aalto</a></li>
+                                    <li><a href="https://github.com/petteri-te/github-exercise">Github Repo</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-nav-search">
+                        <div class="header-search-container">
+                            <input type="text" class="header-nav-search-input" id="header-search-input" placeholder="Search for an address">
+                        </div>
+                        <div class="header-search-results" id="search-results">
+                            <div class="header-search-results-container">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-nav-user">
+                        <button class="header-nav-user-button" id="login-button">Sign in</button>
+                        <button class="header-nav-user-button" id="register-button">Register</button>
+                    </div>
+                </div>
+            </article>
+        </section>
         <section class="app container">
             <article>
                 <%~ it.body %>
@@ -18,4 +51,5 @@
             <article>
         </section>
     </body>
+    <script src="/js/main.js"></script>
 </html>

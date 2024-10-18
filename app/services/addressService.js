@@ -6,12 +6,10 @@ const sql = postgres({});
 
 // Function to create a new address
 const create = async (name, address) => {
-    console.log("in create");
-    // Inserting the provided name and address into the 'addresses' table
+  // Inserting the provided name and address into the 'addresses' table
   await sql`INSERT INTO addresses (name, address)
-    VALUES (${ name }, ${ address })`;
-    console.log("Address added to the database");
-
+    VALUES (${name}, ${address})`;
+  console.log("Address added to the database");
 };
 
 // Function to find all addresses
@@ -21,18 +19,14 @@ const findAll = async () => {
 
 // Function to find addresses by name or address (partial match)
 const findByNameOrAddressLike = async (nameOrAddress) => {
- 
-  // modify from Sonja: likePart -> namePart
-  // const likePart = `%${nameOrAddress}%`;
   const namePart = `%${nameOrAddress}%`;
   return await sql`SELECT * FROM addresses
-    WHERE name ILIKE ${ namePart } OR address ILIKE ${ namePart }`;
+    WHERE name ILIKE ${namePart} OR address ILIKE ${namePart}`;
 };
 
-// Function to delete an address by ID
 const deleteById = async (id) => {
-    await sql`DELETE FROM addresses WHERE id = ${ id }`;
-  };
+  await sql`DELETE FROM addresses WHERE id = ${id}`;
+};
 
-  // Exporting the functions to be used in other modules
+// Exporting the functions to be used in other modules
 export { deleteById, create, findAll, findByNameOrAddressLike };
