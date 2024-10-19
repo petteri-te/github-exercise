@@ -1,25 +1,32 @@
 import { Pool } from "../deps.js";
 
-const CONCURRENT_CONNECTIONS = 2;
+const DATABASE_URL = Deno.env.get("DATABASE_URL");
+const FLYWAY_URL = Deno.env.get("FLYWAY_URL");
+const CONCURRENT_CONNECTIONS = 10;
 let connectionPool;
-if (Deno.env.get("DATABASE_URL")) {
-  console.log(`Online Database options: ${Deno.env.get("DATABASE_URL")}`);
-  connectionPool = new Pool(Deno.env.get("DATABASE_URL"),
-    CONCURRENT_CONNECTIONS, true);
-} else if (Deno.env.get("FLYWAY_URL")) {
-  console.log(`Flyway options: ${Deno.env.get("FLYWAY_URL")}`);
-  connectionPool = new Pool(Deno.env.get("FLYWAY_URL"),
-    CONCURRENT_CONNECTIONS, true);
+
+if (DATABASE_URL) {
+  console.log(`Online Database options: ${DATABASE_URL}`);
+
+  connectionPool = new Pool(DATABASE_URL,CONCURRENT_CONNECTIONS, true);
+} else if (FLYWAY_URL) {
+  console.log(`Flyway options: ${FLYWAY_URL}`);
+
+  connectionPool = new Pool(FLYWAY_URL, CONCURRENT_CONNECTIONS, true);
 } else {
   console.log(`couldn't find a db/URL for the Pool`);
+
   connectionPool = new Pool({}, CONCURRENT_CONNECTIONS, true);
 }
+
 const executeQuery = async (query, params) => {
   const response = {};
   let client;
+
   try {
     client = await connectionPool.connect();
     const result = await client.queryObject(query, params);
+
     if (result.rows) {
       response.rows = result.rows;
     }
@@ -35,4 +42,5 @@ const executeQuery = async (query, params) => {
 
   return response;
 };
+
 export { executeQuery };
