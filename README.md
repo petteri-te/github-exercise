@@ -230,5 +230,3 @@ tests.
 
 (This isn't yet discussed in the materials, but will be sooner or later!)
 # github-exercise
-
-test
