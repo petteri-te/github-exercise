@@ -1,7 +1,7 @@
 <% layout("./layouts/layout.eta") %>
 
 <div class="title-headings">
-    <h1> Welcome to the shahid address book 🏡</h1>
+    <h1> Welcome to the multi-developer address book 🏡</h1>
     <h2>➕ Add new address</h2>
 </div>
 
