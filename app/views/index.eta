@@ -14,7 +14,7 @@
             <input id ="address" class="form-field" type="text" required name="address" />
         </fieldset>
         
-        <button class="button" type="submit" aria-label="Add new address">Submit!</button>
+        <button class="button" type="submit" aria-label="Add new address">Submit</button>
     </form>
 </div>
 
