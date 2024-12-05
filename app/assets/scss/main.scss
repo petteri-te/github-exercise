@@ -280,7 +280,6 @@ body {
           margin: 0.5rem;
           height: 2rem;
           width: 100%;
-          color: #ffffff56;
           font-size: 1.2rem;
           font-family: "Roboto", sans-serif;
           text-align: center;
@@ -382,7 +381,7 @@ body {
               -webkit-transform 0.1s, transform 0.1s;
             user-select: none;
             -webkit-user-select: none;
-            width: 100%;
+            width: 100px;
 
             &:focus-visible {
               box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
