@@ -13,7 +13,12 @@
 
 # THIS IS YOUR GITHUB exercise
 
-multideveloper env so that we create working branches, merge pull requests 
+This exercise and repo is based on course material by Aalto FiTECH Web software Development. This version of the course is depcreated and unsupported adn should be also removed from online access by Jan 2025.
+But that does not matter for this exercise. You have repo with working code. 
+Learn to use github with our breaking the existing working code.
+
+
+Multideveloper env so that we create working branches, merge pull requests 
 
 
 Github multi-developer exercises
