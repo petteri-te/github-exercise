@@ -9,7 +9,7 @@
         1. [Github](#reminder-what-github-gives-you-when-new-repo-is-created)
         2. [Video timeline](#timeline-in-the-video)
 3. [Adding styles](#adding-styles)
-4. [Walking Skeleton](#-------------walking-skeleton--readme-part--------------)
+4. [Walking Skeleton](#walking-skeleton-readme-part)
 
 # THIS IS YOUR GITHUB exercise
 
@@ -78,6 +78,7 @@ Some time/days later after you have done one or multiple changes to code, go and
 
 ### REMINDER WHAT GITHUB GIVES YOU WHEN NEW REPO IS CREATED
 
+```
 echo "# github-exercise" >> README.md
 git init
 git add README.md
@@ -85,33 +86,42 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/petteri-te/github-exercise.git
 git push -u origin main
-NOW YOU already have the code in the remote repo so get it from there. You do not need to commit anything in the beginning. Just pull to your empty local git directory.
+```
+
+NOW YOU already have the code in the remote repo so get it from there. 
+You do not need to commit anything in the beginning. Just pull to your empty 
+local git directory.
 Then you can start making a change to the existing code.
 
 You need to 
+```
 git init
 git remote ….
 git pull
-
+```
 
 ### TIMELINE IN THE VIDEO
 
-1 - At 18min start setting up folder and git repo on your local machine
-2- learn how to create local branches, move between them, merge them
-3- at 24min20s add branches to your local git
--git checkout -b new-branch
-4- at 28min40s start setting up remote repo
-5 - at 33min making sure you have configured your github with name and email for remote repo connection
+1. At 18min start setting up folder and git repo on your local machine
+2. learn how to create local branches, move between them, merge them
+3. at 24min20s add branches to your local git
+```git checkout -b new-branch```
+4. at 28min40s start setting up remote repo
+5. at 33min making sure you have configured your github with name and email for remote repo connection
 (and you might need to authenticate yourself - login in to github)
+```
 git config –global user.name your-name
-git config –global user.email your-email    you used in github account
-6 - at 38min how to resolve merge conflict between remote repo and your local 
+git config –global user.email your-email-you-used-in-github-account
+```
+6. at 38min how to resolve merge conflict between remote repo and your local 
 -manually resolve in the code file
--git add .
--git commit -m “merge change”
--git push
-7 - at xx   now push your new local working branch to remote repo and create a new branch there
-git push -u origin new
+```
+git add .
+git commit -m “merge change”
+git push
+```
+7. at xx   now push your new local working branch to remote repo and create a new branch there
+```git push -u origin new```
 and now resolve the pull request (PR) in github 
 
 ## Adding styles
@@ -128,7 +138,7 @@ bash compile_sass.sh
 ```
 
 
-# ------------ Walking skeleton  README part  ------------
+# Walking skeleton README part
 
 This is a walking skeleton -- a starting point for working on the course
 assignments -- for the free online Web Software Development course available at
