@@ -22,6 +22,7 @@ const listAddresses = async ({ render }) => {
   };
   // Rendering the 'index.eta' template with address data.
   render("index.eta", data);
+  
 };
 
 // Function to delete an address.
