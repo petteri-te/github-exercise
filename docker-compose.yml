@@ -1,14 +1,13 @@
-
 services:
   app:
     build: app
     image: app
     restart: "no"
     volumes:
-     - ./app/:/app
-     - ./app-cache/:/app-cache    
+      - ./app/:/app
+      - ./app-cache/:/app-cache
     ports:
-      - 8080:7777
+      - 7777:7777
     depends_on:
       - database
       - flyway
@@ -16,8 +15,8 @@ services:
       - project.env
 
   database:
-    container_name: "postgres-database"
-    image: "postgres:14.1"
+    container_name: database-server
+    image: postgres:14.1
     restart: "no"
     env_file:
         - project.env
@@ -36,7 +35,7 @@ services:
     entrypoint: "/bin/true" # Prevent startup on docker-compose up
     build: e2e-playwright
     image: e2e-playwright
-    
+    network_mode: host
     depends_on:
       - app
     volumes:
