@@ -10,6 +10,7 @@
         2. [Video timeline](#timeline-in-the-video)
 3. [Adding styles](#adding-styles)
 4. [Walking Skeleton](#walking-skeleton-readme-part)
+5. [📝 License ](#-license-)
 
 # THIS IS YOUR GITHUB exercise
 
@@ -245,3 +246,6 @@ tests.
 
 (This isn't yet discussed in the materials, but will be sooner or later!)
 # github-exercise
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
