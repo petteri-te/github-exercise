@@ -15,9 +15,9 @@
             <article>
                 <div class="header-nav-wrapper">
                     <div class="header-nav-title">
-                        <h1 class="header-title">Menu</h1>
+                       <h1 class="header-title">Address Book</h1>
                         <div class="header-menu-icon-wrapper">
-                            <h1 class="header-menu-icon" id="menu-icon">></h1>
+                            <h1 class="header-menu-icon" id="menu-icon">≡</h1>
                             <div class="dropdown-menu" id="dropdown-menu">
                                 <ul>
                                     <li><a href="https://docs.deno.com/">Deno</a></li>
