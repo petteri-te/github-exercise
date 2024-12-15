@@ -38,8 +38,8 @@
                     </div>
                 </div>
                 <div class="nav-user">
-                    <button class="nav-user-button" id="login-button">Sign in</button>
-                    <button class="nav-user-button" id="register-button">Register</button>
+                    <button class="nav-user-button" id="login-button">🔑Sign in</button>
+                    <button class="nav-user-button" id="register-button">🖊Register</button>
                 </div>
             </nav>
             <section class="app container">
