@@ -6,13 +6,22 @@ const addAddress = async ({ request, response }) => {
   const body = request.body();
   const params = await body.value;
   // Retrieving name and address from the form data.
-  const name = params.get("name");
-  const address = params.get("address");
-  console.log(`Name: ${name}\nAddress ${address}`);
-  // Creating a new address using the addressService.
-  await addressService.create(name, address);
-  // Redirecting to the root page.
-  return response.redirect("/");
+  const name = params.get("name").trim();
+  const address = params.get("address").trim();
+  console.log(name.length);
+  if (name.length>0 && address.length>0){
+    console.log(`Name: ${name}\nAddress ${address}`);
+    // Creating a new address using the addressService.
+    await addressService.create(name, address);
+    // Redirecting to the root page.
+    return response.redirect("/");
+  }else{
+    response.headers.set("Content-Type","text/html; charset=utf-8");
+    response.status= 400;
+    response.body= `<h1>The name or address cannot be empty or contain only white spaces.</h1>
+            <a href="/">Back</> `;
+  }
+  
 };
 
 // Function to list all addresses.
@@ -26,7 +35,7 @@ const listAddresses = async ({ render }) => {
 };
 
 // Function to delete an address.
-const deleteAddress = async ({ params, response }) => {
+const deleteAddress = async ({ params, response }) => {   
   // Parsing the URL to extract the address ID
   const id = params.id;
   // Deleting the address using the addressService.
