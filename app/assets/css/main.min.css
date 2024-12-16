@@ -349,7 +349,8 @@ body section.app.container article .title-headings {
     justify-content: center;
 }
 body section.app.container article .title-headings h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, serif;
 }
 body section.app.container article .form-wrapper {
     display: flex;
