@@ -2,18 +2,37 @@
 
 <div class="title-headings">
     <h1> Welcome to the multi-developer address book Abi🏡 - Changed by Antanina</h1>
-    <h2>➕ Add new address</h2>
+    <div><h2  style="display: inline;">➕ Add your name & address</h2>&nbsp;<p style="display: inline;"> - Changed by Md Waliullah</p></div>
 </div>
 
 <div class="form-wrapper">
     <form id="addressForm" method="POST">
-        <fieldset>
-            <label class="form-label" for="name"> Name: </label>
-            <input id="name" class="form-field" type="text" required name="name" placeholder="Enter your name, eg. Mikko, Sanna..."/>
-            <label for="address"class="form-label">Address: </label>
-            <input id ="address" class="form-field" type="text" required name="address" placeholder="Enter your address, eg. Puistokatu 1b..." />
-        </fieldset>
-        
+    <fieldset style="border: none; padding: 0;">
+    <!-- Name -->
+    <div style="margin-bottom: 20px;">
+        <div>
+            <label class="form-label" style="display: block; margin-bottom: 5px;">Last name:</label>
+            <input id="lastName" class="form-field" style="width: 750px; padding: 8px; font-size: 16px;" type="text" required placeholder="Enter your last name, eg. Suomalainen, Vuorinen...">
+        </div>
+        <div style="margin-top: 10px;">
+            <label class="form-label" style="display: block; margin-bottom: 5px;">First name:</label>
+            <input id="firstName" class="form-field" style="width: 750px; padding: 8px; font-size: 16px;" type="text" required placeholder="Enter your first name, eg. Mikko, Sanna...">
+        </div>
+    </div>
+
+    <!-- Address -->
+    <div style="margin-bottom: 20px;">
+        <div>
+            <label class="form-label" style="display: block; margin-bottom: 5px;">Street address:</label>
+            <input id="streetAddress" class="form-field" style="width: 750px; padding: 8px; font-size: 16px;" type="text" required name="streetAddress" placeholder="Enter your street address, eg. Puistokatu 1b...">
+        </div>
+        <div style="margin-top: 10px;">
+            <label class="form-label" style="display: block; margin-bottom: 5px;">Post code and City:</label>
+            <input id="postCodeCity" class="form-field" style="width: 750px; padding: 8px; font-size: 16px;" type="text" required name="postCodeAndCity" placeholder="Enter your post code and city, eg. 01234 Espoo">
+        </div>
+    </div>
+    </fieldset>
+
         <button class="button" type="submit" aria-label="Add new address">Submit</button>
     </form>
 </div>
