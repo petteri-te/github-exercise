@@ -9,9 +9,9 @@
     <form id="addressForm" method="POST">
         <fieldset>
             <label class="form-label" for="name"> Name: </label>
-            <input id="name" class="form-field" type="text" required name="name" placeholder="Enter Your Name, eg. Mikko,Sanna...."/>
+            <input id="name" class="form-field" type="text" required name="name" placeholder="Enter your name, eg. Mikko, Sanna..."/>
             <label for="address"class="form-label">Address: </label>
-            <input id ="address" class="form-field" type="text" required name="address" placeholder="Enter Your Address,eg. Puistokatu 1b...." />
+            <input id ="address" class="form-field" type="text" required name="address" placeholder="Enter your address, eg. Puistokatu 1b..." />
         </fieldset>
         
         <button class="button" type="submit" aria-label="Add new address">Submit</button>
