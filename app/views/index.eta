@@ -12,11 +12,11 @@
     <div style="margin-bottom: 20px;">
         <div>
             <label class="form-label" style="display: block; margin-bottom: 5px;">Last name:</label>
-            <input id="lastName" class="form-field" style="width: 750px; padding: 8px; font-size: 16px;" type="text" required placeholder="Enter your last name, eg. Suomalainen, Vuorinen...">
+            <input id="lastName" name="lastName" class="form-field" style="width: 750px; padding: 8px; font-size: 16px;" type="text" required placeholder="Enter your last name, eg. Suomalainen, Vuorinen...">
         </div>
         <div style="margin-top: 10px;">
             <label class="form-label" style="display: block; margin-bottom: 5px;">First name:</label>
-            <input id="firstName" class="form-field" style="width: 750px; padding: 8px; font-size: 16px;" type="text" required placeholder="Enter your first name, eg. Mikko, Sanna...">
+            <input id="firstName" name="firstName" class="form-field" style="width: 750px; padding: 8px; font-size: 16px;" type="text" required placeholder="Enter your first name, eg. Mikko, Sanna...">
         </div>
     </div>
 
@@ -43,7 +43,8 @@
     <ul>
         <% it.addresses.forEach((address) => { %>
             <li>
-                <%= address.name %>, <%= address.address %>
+                <%= address.name %><br> 
+                <%= address.address %>
                 <form method="POST" action="/delete/<%= address.id %>">
                     <button class="delete-button" type="submit" aria-label="Delete address for <%= address.name %>">Delete</button>
                 </form>
