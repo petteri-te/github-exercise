@@ -48,7 +48,7 @@
                     <%~ includeFile("./partials/footer.eta") %>
                 <article>
             </section>
-            <script src="/js/main.js"></script>
         </section>
+        <script src="/js/main.js"></script>
     </body>
 </html>
