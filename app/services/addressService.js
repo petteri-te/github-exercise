@@ -1,11 +1,17 @@
 import { executeQuery } from "../database/database.js";
 
 // Function to create a new address
-const create = async (name, address) => {
+const create = async (lastName, firstName, streetAddress, postCodeCity) => {
   // Inserting the provided name and address into the 'addresses' table
-  await executeQuery(`INSERT INTO addresses (name, address)
-    VALUES ($name, $address);`, 
-    {name: name, address: address});
+  await executeQuery(`INSERT INTO addresses (first_name, last_name, street_address, post_code_city)
+    VALUES ($lastName, $firstName, $streetAddress, $postCodeCity);`, 
+    {
+      lastName: lastName,
+      firstName: firstName,
+      streetAddress: streetAddress,
+      postCodeCity: postCodeCity
+    }
+  );
   console.log("Address added to the database");
 };
 
@@ -13,6 +19,7 @@ const create = async (name, address) => {
 const findAll = async () => {
   return (await executeQuery(`SELECT * FROM addresses;`)).rows;
 };
+
 
 // Function to find addresses by name or address (partial match)
 const findByNameOrAddressLike = async (nameOrAddress) => {

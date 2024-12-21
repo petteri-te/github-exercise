@@ -43,10 +43,10 @@
     <ul>
         <% it.addresses.forEach((address) => { %>
             <li>
-                <%= address.name %><br> 
-                <%= address.address %>
+                <%= address.first_name %> <%= address.last_name %><br> 
+                <%= address.street_address %>, <%= address.post_code_city %>
                 <form method="POST" action="/delete/<%= address.id %>">
-                    <button class="delete-button" type="submit" aria-label="Delete address for <%= address.name %>">Delete</button>
+                    <button class="delete-button" type="submit" aria-label="Delete address for <%= address.first_name %> <%= address.last_name %>">Delete</button>
                 </form>
             </li>
         <% }); %>
