@@ -24,9 +24,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   //Show a pop-up to clarify the changes in the form
-  alert(
-    "The form was simplified earlier with just 'Name' and 'Address'. It has now been expanded into 'Last name', 'First name', 'Street address', and 'Post code and City' for improved detail and clarity.\n\n- Updated by Md Waliullah"
-  );
+ window.onload = function () {
+  setTimeout(() => {
+    alert("The form was simplified earlier with just 'Name' and 'Address'. It has now been expanded into 'Last name', 'First name', 'Street address', and 'Post code and City' for improved detail and clarity.\n\n- Updated by Md Waliullah");
+  }, 0);
+};
 
   searchInput.addEventListener("input", async function () {
     const searchValue = searchInput.value;
@@ -99,3 +101,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
