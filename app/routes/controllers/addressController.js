@@ -11,7 +11,7 @@ const addAddress = async ({ request, response }) => {
   const firstName = params.get("firstName");
   const streetAddress = params.get("streetAddress");
   const postCodeCity = params.get("postCodeAndCity");
-  console.log(`Name: ${lastName} ${firstName}\nAddress: ${streetAddress}, ${postCodeCity}`);
+  console.log(`Name: ${firstName} ${lastName}\nAddress: ${streetAddress}, ${postCodeCity}`);
   // Creating a new address using the addressService.
   await addressService.create(lastName, firstName, streetAddress, postCodeCity);
   // Redirecting to the root page.
@@ -32,8 +32,6 @@ const listAddresses = async ({ render }) => {
 const deleteAddress = async ({ params, response }) => {  
   // Parsing the URL to extract the address ID
   const id = params.id;
-  console.log("Deleting ID:", id);
-
   // Deleting the address using the addressService.
   await addressService.deleteById(id);
   // Redirecting to the root page.

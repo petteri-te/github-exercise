@@ -10,11 +10,13 @@
         2. [Video timeline](#timeline-in-the-video)
 3. [Adding styles](#adding-styles)
 4. [Walking Skeleton](#walking-skeleton-readme-part)
-5. [📝 License ](#-license-)
+5. [📝 License ](#license)
 
 # THIS IS YOUR GITHUB exercise
 
-This exercise and repo is based on course material by Aalto FiTECH Web software Development. This version of the course is depcreated and unsupported adn should be also removed from online access by Jan 2025.
+This exercise and repo is based on course material by Aalto FiTECH Web software Development. 
+This version of the course is deprecated and unsupported adn should be also removed from online 
+access by Jan 2025.
 But that does not matter for this exercise. You have repo with working code. 
 Learn to use github with our breaking the existing working code.
 
@@ -63,7 +65,8 @@ You can do multiple changes to practice. Create a new local branch for your chan
 
 ## TASK 2 - TO REVIEW AND APPROVE A PR
 
-Someone will assign you to review their change. You will get an email notification about this. You can also monitor the github repo to see what is going on
+Someone will assign you to review their change. You will get an email notification about this. You can also monitor the 
+github repo to see what is going on
 Go to the PR (pull request), open the source code and review the change
 Make sure that the change is something that does not break the application, the code looks nicely written, understandable etc. We should be able to trust that the person who has created the PR has first tested it and has verified that the functionality does not break the app. Your job is to make sure the implementation is pretty, nice, good architecture, good coding, good solution etc. You can comment, ask for changes or approve. When you approve. Then the PR creator can and will merge the code
 
@@ -246,6 +249,6 @@ tests.
 
 (This isn't yet discussed in the materials, but will be sooner or later!)
 # github-exercise
-## 📝 License <a name="license"></a>
+## 📝License
 
 This project is [MIT](./LICENSE) licensed.

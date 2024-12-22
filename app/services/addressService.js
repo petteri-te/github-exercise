@@ -3,7 +3,7 @@ import { executeQuery } from "../database/database.js";
 // Function to create a new address
 const create = async (lastName, firstName, streetAddress, postCodeCity) => {
   // Inserting the provided name and address into the 'addresses' table
-  await executeQuery(`INSERT INTO addresses (first_name, last_name, street_address, post_code_city)
+  await executeQuery(`INSERT INTO addresses (last_name, first_name, street_address, post_code_city)
     VALUES ($lastName, $firstName, $streetAddress, $postCodeCity);`, 
     {
       lastName: lastName,
