@@ -1,7 +1,6 @@
 CREATE TABLE names (
   id SERIAL PRIMARY KEY,
-  lastName TEXT NOT NULL,
-  firstName TEXT NOT NULL
+  name TEXT NOT NULL
 );
 
 CREATE TABLE addresses (

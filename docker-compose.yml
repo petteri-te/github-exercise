@@ -20,8 +20,6 @@ services:
     restart: "no"
     env_file:
         - project.env
-    volumes:
-    - db-data:/var/lib/postgresql/data
 
   flyway:
     image: flyway/flyway
@@ -29,7 +27,7 @@ services:
       - database
     volumes:
       - .:/flyway/sql
-    command: -connectRetries=60 -baselineOnMigrate=true repair migrate
+    command: -connectRetries=60 -baselineOnMigrate=true migrate
     env_file:
       - project.env
 
@@ -42,5 +40,3 @@ services:
       - app
     volumes:
       - ./e2e-playwright/tests:/e2e-playwright/tests
-volumes:
-  db-data:
