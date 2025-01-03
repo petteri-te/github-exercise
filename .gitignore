@@ -1,5 +1,21 @@
+# Existing cache and IDE patterns
 app-cache/deps/**
 app-cache/gen/**
 app-cache
 .vscode
 .DS_Store
+
+# Editor and system temp files
+*~
+*.swp
+*.swo
+.*.swp
+.*.swo
+*\ changes
+*.tmp
+*.temp
+*.bak
+
+# OS specific
+Thumbs.db
+desktop.ini
