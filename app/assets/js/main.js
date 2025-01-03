@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const menuIcon = document.getElementById("menu-icon");
   const dropdownMenu = document.getElementById("dropdown-menu");
-  const searchInput = document.getElementById("header-search-input");
+  const searchInput = document.getElementById("nav-search-input");
   const searchResults = document.getElementById("search-results");
   const loginButton = document.getElementById("login-button");
   const registerButton = document.getElementById("register-button");
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function displaySearchResults(results, searchValue) {
     const resultsContainer = document.querySelector(
-      ".header-search-results-container"
+      ".nav-search-results-container"
     );
 
     resultsContainer.innerHTML = "";
