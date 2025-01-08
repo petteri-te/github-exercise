@@ -1,7 +1,7 @@
 @import "reset";
 
 body {
-  overflow: hidden;
+  // overflow: hidden;
   height: 100dvh;
   background-color:bisque;
   color: #ffffff;
@@ -159,7 +159,8 @@ body {
             border: 1px solid #3f433f;
             border-radius: 5px;
             color: #ffffff;
-            width: 100%;
+            width: 70%;
+            display: block;
             height: 46px;
             outline: none;
             padding-left: 1.5rem;
@@ -178,12 +179,12 @@ body {
             transition: border 0.3s ease-in-out;
           }
 
-        .header-search-results {
+        .nav-search-results {
           display: none;
           transition: display 0.3s ease-in-out;
         }
 
-        .header-search-results.show {
+        .nav-search-results.show {
           border: 1px solid #3f433f;
           border-radius: 25px;
           position: absolute;

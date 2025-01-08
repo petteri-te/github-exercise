@@ -39,7 +39,7 @@ h6 {
     isolation: isolate;
 }
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 100dvh;
     background-color: #1e1e1e;
     color: #fff;
@@ -177,7 +177,8 @@ body .container .nav-search input {
     border: 1px solid #3f433f;
     border-radius: 5px;
     color: #fff;
-    width: 100%;
+    width: 70%;
+    display: block;
     height: 46px;
     outline: none;
     padding-left: 1.5rem;
@@ -193,11 +194,11 @@ body .container .nav-search input:focus {
     border-radius: 25px;
     transition: border 0.3s ease-in-out;
 }
-body .container .nav-search .header-search-results {
+body .container .nav-search .nav-search-results {
     display: none;
     transition: display 0.3s ease-in-out;
 }
-body .container .nav-search .header-search-results.show {
+body .container .nav-search .nav-search-results.show {
     border: 1px solid #3f433f;
     border-radius: 25px;
     position: absolute;
@@ -456,7 +457,7 @@ nav {
     margin-left: auto;
     padding: 0 2rem;
 }
-header .container,
+nav .container,
 nav {
     padding: 0 2rem;
     margin: 0 auto 0 auto;
@@ -466,7 +467,7 @@ nav {
         width: 100vw;
     }
     section.container,
-    header .container,
+    nav .container,
     nav {
         width: fit-content;
     }
@@ -476,7 +477,7 @@ nav {
         width: 100vw;
     }
     section.container,
-    header .container,
+    nav .container,
     nav {
         width: 540px;
     }
@@ -486,7 +487,7 @@ nav {
         width: 100vw;
     }
     section.container,
-    header .container,
+    nav .container,
     nav {
         width: 720px;
     }
@@ -496,7 +497,7 @@ nav {
         width: 100vw;
     }
     section.container,
-    header .container,
+    nav .container,
     nav {
         width: 960px;
     }
@@ -506,7 +507,7 @@ nav {
         width: 100vw;
     }
     section.container,
-    header .container {
+    nav .container {
         width: 1140px;
     }
 }
@@ -515,7 +516,7 @@ nav {
         width: 100vw;
     }
     section.container,
-    header .container,
+    nav .container,
     nav {
         width: 90%;
     }
