@@ -25,9 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //Show a pop-up to clarify the changes in the form
  window.onload = function () {
-  setTimeout(() => {
-    alert("The form was simplified earlier with just 'Name' and 'Address'. It has now been expanded into 'Last name', 'First name', 'Street address', and 'Post code and City' for improved detail and clarity.\n\n- Updated by Md Waliullah");
-  }, 0);
+  if (!sessionStorage.getItem("alertShown")) {
+    setTimeout(() => {
+      alert("The form was simplified earlier with just 'Name' and 'Address'. It has now been expanded into 'Last name', 'First name', 'Street address', and 'Post code and City' for improved detail and clarity.\n\n- Updated by Md Waliullah");
+      sessionStorage.setItem("alertShown", "true");
+
+    }, 0);
+  }
 };
 
   searchInput.addEventListener("input", async function () {
@@ -63,6 +67,27 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     resultsContainer.innerHTML = "";
+
+    // Create Close Button
+    const closeButton = document.createElement("button");
+    closeButton.classList.add("close-button");
+    closeButton.innerHTML = "&times;"; // "×" (Big X)
+    
+    closeButton.addEventListener("mouseover", () => {
+      closeButton.style.color = "rgba(255, 255, 255, 0.9)";
+    });
+    
+    closeButton.addEventListener("mouseout", () => {
+      closeButton.style.color = "rgba(255, 255, 255, 0.5)";
+    });
+
+    closeButton.addEventListener("click", () => {
+        resultsContainer.innerHTML = ""; // Clear content
+        searchResults.classList.remove("show"); // Hide results container
+    });
+
+    resultsContainer.appendChild(closeButton); // Append close button before results
+
     if (results.length === 0) {
       const h1 = document.createElement("h1");
       h1.innerHTML = `
@@ -75,26 +100,23 @@ document.addEventListener("DOMContentLoaded", function () {
       grid.innerHTML = `
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Address</th>
-          <th>City</th>
-          <th>State</th>
-          <th>Zip</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Street Address</th>
+          <th>Post Code & City</th>
         </tr>
       </thead>
-      <tbody>
-      </tbody>
-      `;
+      <tbody></tbody>
+    `;
       resultsContainer.appendChild(grid);
       const tbody = grid.querySelector("tbody");
       results.forEach((result) => {
         const tr = document.createElement("tr");
         tr.innerHTML = `
-          <td>${result.name}</td>
-          <td>${result.address}</td>
-          <td>${result.city || "No city"}</td>
-          <td>${result.state || "No state"}</td>
-          <td>${result.zip || "No zip"}</td>
+          <td>${result.first_name}</td>
+          <td>${result.last_name}</td>
+          <td>${result.street_address}</td>
+          <td>${result.post_code_city}</td>
       `;
         tbody.appendChild(tr);
       });

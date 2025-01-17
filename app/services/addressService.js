@@ -24,9 +24,13 @@ const findAll = async () => {
 // Function to find addresses by name or address (partial match)
 const findByNameOrAddressLike = async (nameOrAddress) => {
   const partOfWord = `%${nameOrAddress}%`;
-  return (await executeQuery(`SELECT * FROM addresses
-    WHERE name ILIKE $namePart OR address ILIKE $addressPart;`, 
-    {namePart: partOfWord, addressPart: partOfWord})).rows;
+  const search = (await executeQuery(`SELECT * FROM addresses
+    WHERE first_name ILIKE $namePart 
+    OR last_name ILIKE $namePart 
+    OR street_address ILIKE $addressPart 
+    OR post_code_city ILIKE $addressPart;`, 
+    {namePart: partOfWord, addressPart: partOfWord}));
+    return search.rows;
 };
 
 const deleteById = async (id) => {

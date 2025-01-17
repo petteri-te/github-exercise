@@ -53,7 +53,7 @@ ls -la "$SCRIPT_DIR/assets/scss"
 
 # Compiling SCSS
 echo "Compiling SCSS..."
-sass "$SCSS_FILE" "$OUTPUT_DIR/main.min.css" --style compressed
+sass "$SCSS_FILE" "$OUTPUT_DIR/main.min.css" --style expanded
 
 # Check for errors during compilation
 if [ $? -eq 0 ]; then

@@ -1,16 +1,4 @@
-/* Container */
-section.container,
-nav {
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 2rem;
-}
-
-nav .container,
-nav {
-    padding: 0 2rem;
-    margin: 0 auto 0 auto;
-}
+/* Media queries */
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 576px) {
