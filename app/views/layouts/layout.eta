@@ -45,10 +45,10 @@
             <section class="app container">
                 <article>
                     <%~ it.body %>
-                    <%~ includeFile("./partials/footer.eta") %>
-                <article>
+                </article>
             </section>
-            <script src="/js/main.js"></script>
         </section>
+        <%~ includeFile("./partials/footer.eta") %>
+        <script src="/js/main.js"></script>
     </body>
 </html>
